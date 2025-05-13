@@ -6,6 +6,31 @@ This repository contains the codes and docs for our implementation of K means cl
 
 ## Table of Contents
 
+1. [Dataset Overview](#dataset-overview)
+2. [🛠️ Model Training](#-model-training)
+   - [Data Cleaning and Transformation](#data-cleaning-and-transformation)
+   - [Feature Scaling](#feature-scaling)
+   - [Custom K-Means Implementation](#custom-k-means-implementation)
+   - [Determining Optimal k Using the Elbow Method](#determining-optimal-k-using-the-elbow-method)
+3. [🧪 Model Testing](#-model-testing)
+   - [Manual Labeling for Ground Truth](#manual-labeling-for-ground-truth)
+   - [Label Matching via Hungarian Algorithm](#label-matching-via-hungarian-algorithm)
+   - [Evaluation Metrics](#evaluation-metrics)
+   - [Confusion Matrix Visualization](#confusion-matrix-visualization)
+4. [Results](#results)
+   - [📊 Part 1](#-part-1)
+     - [🌟 Key Learnings From K=3](#key-learnings-from-k3)
+     - [🎨 PCA-Powered Visualization](#pca-powered-visualization)
+     - [📊 Performance Showdown](#performance-showdown)
+   - [📊 Part 2](#-part-2)
+     - [🌟 Key Learnings From K=2](#key-learnings-from-k2)
+     - [🎨 PCA-Powered Visualization](#pca-powered-visualization-2)
+     - [📊 Performance Showdown](#performance-showdown-2)
+5. [🛠️ Behind the Scenes](#-behind-the-scenes)
+6. [🚀 Future Explorations](#-future-explorations)
+7. [Authors](#authors)
+
+
 ## Dataset overview
 
 This dataset contains mobile app usage data, capturing key numerical attributes that provide insights into user behavior. Each record consists of the following attributes:
@@ -134,7 +159,7 @@ Although K-Means is an unsupervised algorithm (meaning it doesn't use labels dur
 # 📊 Part 2    
 
 
-## 🌟 **Key Insights at a Glance**  
+## 🌟 **Key Learnings From K=2**  
 - **Optimal Clusters (K=2)**: Discovered natural groupings of apps into **High** and **Low Engagement** with **97% accuracy** (modified dataset).  
 - **PCA Magic**: Visualized clusters in 2D space—Principal Component 1 revealed the dominant split between engagement levels.  
 - **Metrics That Shine**:  
