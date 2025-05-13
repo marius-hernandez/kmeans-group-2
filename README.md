@@ -65,39 +65,37 @@ This involves:
 In our case, k = 2 was selected, aligning with our goal to separate apps into High Engagement and Low Engagement categories.
 
 
-  ## 🧪 **Model Testing**  
 
-Although K-Means is an unsupervised algorithm (meaning it doesn't use labels during training), we introduce a manual validation step to test how well the clustering aligns with real-world categories:
+ ## 🧪 **Model Testing**
 
-Manual Labeling for Ground Truth:
-Certain applications are pre-identified based on common knowledge:
+Although K-Means is an unsupervised algorithm (meaning it doesn't use labels during training), we introduce a **manual validation step** to test how well the clustering aligns with real-world categories:
 
-High Engagement (Label = 0): e.g., Instagram, WhatsApp
+- **Manual Labeling for Ground Truth**:  
+  Certain applications are pre-identified based on common knowledge:
 
-Low Engagement (Label = 1): e.g., Safari, 8 Ball Pool
-These labels are not used during training, but are introduced after clustering for evaluation purposes.
+  - **High Engagement (Label = 0)**: e.g., Instagram, WhatsApp  
+  - **Low Engagement (Label = 1)**: e.g., Safari, 8 Ball Pool  
 
-Label Matching via Hungarian Algorithm:
-Since K-Means assigns arbitrary cluster numbers (e.g., Cluster 0 may represent Low or High), we use the Hungarian Algorithm (from scipy.optimize.linear_sum_assignment) to optimally match the predicted clusters to the true labels based on maximum overlap. This ensures a fair and meaningful comparison.
+  These labels are not used during training, but are introduced after clustering for evaluation purposes.
 
-Evaluation Metrics:
-After aligning clusters with ground truth labels, we assess clustering performance using standard classification metrics:
+- **Label Matching via Hungarian Algorithm**:  
+  Since K-Means assigns arbitrary cluster numbers (e.g., Cluster 0 may represent Low or High Engagement), we use the **Hungarian Algorithm** (from `scipy.optimize.linear_sum_assignment`) to optimally match the predicted clusters to the true labels based on maximum overlap. This ensures a fair and meaningful comparison.
 
-Accuracy: Proportion of correct classifications
+- **Evaluation Metrics**:  
+  After aligning clusters with ground truth labels, we assess clustering performance using standard classification metrics:
 
-Precision: Correctness of positive predictions
+  - **Accuracy**: Proportion of correct classifications  
+  - **Precision**: Correctness of positive predictions  
+  - **Recall**: Coverage of actual positive cases  
+  - **F1 Score**: Harmonic mean of precision and recall  
 
-Recall: Coverage of actual positive cases
+- **Confusion Matrix Visualization**:  
+  A confusion matrix is generated and visualized using **Seaborn’s heatmap**, providing insight into:
 
-F1 Score: Harmonic mean of precision and recall
+  - **Correct classifications** (diagonal cells)  
+  - **Misclassifications** (off-diagonal cells)  
 
-Confusion Matrix:
-A confusion matrix is generated and visualized using Seaborn's heatmap, providing insight into:
-
-Correct classifications (diagonal cells)
-
-Misclassifications (off-diagonal cells)
-This visual aid supports the interpretation of model behavior and errors.
+  This visual aid supports interpretation of model behavior and error patterns.
 
 ## Results
 ## Authors
