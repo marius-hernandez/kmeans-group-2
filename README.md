@@ -26,42 +26,46 @@ Original dataset: https://www.kaggle.com/datasets/anandshaw2001/mobile-apps-scre
 
 Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI3wR/view?usp=sharing
 
-🛠️ Model Training 
+ ## 🛠️ **Model Training**  
 
 Before training, the dataset undergoes data preprocessing to prepare it for clustering:
 
-Data Cleaning and Transformation:
+- **Data Cleaning and Transformation**:
 The dataset contains a mix of numerical features and non-numeric identifiers. Non-numeric fields such as App names or Date values are removed to ensure the clustering algorithm only operates on numerical data. This avoids type errors and focuses the model on quantitative engagement behaviors.
 
-Feature Scaling:
+- **Feature Scaling**:
 The remaining numerical features (such as Usage (minutes), Notifications, and Times Opened) are standardized using StandardScaler from scikit-learn. This transformation converts all features to a common scale (mean = 0, standard deviation = 1), which is important because K-Means uses Euclidean distance and is sensitive to differences in feature magnitude.
 
-Custom K-Means Implementation:
-Rather than using a built-in implementation from libraries like sklearn.cluster.KMeans, we built our K-Means algorithm from scratch in Python. This includes:
+- **Custom K-Means Implementation**:
+Rather than using a built-in implementation from libraries like sklearn.cluster.KMeans, we built our K-Means algorithm from scratch in Python.
 
-Random initialization of centroids
+This includes:
 
-Distance calculation using Euclidean norm
+- **Random initialization of centroids**
 
-Assignment of each data point to the nearest cluster
+- **Distance calculation using Euclidean norm**
 
-Updating centroids as the mean of all assigned points
+- **Assignment of each data point to the nearest cluster**
 
-Iterative repetition until centroids stabilize (convergence)
+- **Updating centroids as the mean of all assigned points**
+
+- **Iterative repetition until centroids stabilize (convergence)**
 
 Determining Optimal k Using the Elbow Method:
-To find the best number of clusters (k), we apply the Elbow Method. This involves:
+To find the best number of clusters (k), we apply the Elbow Method.
 
-Running K-Means with different values of k (from 1 to 9)
+This involves:
 
-Calculating the Within-Cluster Sum of Squares (WCSS) for each k
+- **Running K-Means with different values of k (from 1 to 9)**
 
-Plotting the WCSS values to visually identify the 'elbow'—the point where adding more clusters no longer provides a significant improvement
+- **Calculating the Within-Cluster Sum of Squares (WCSS) for each k**
+
+- **Plotting the WCSS values to visually identify the 'elbow'—the point where adding more clusters no longer provides a significant improvement**
 
 In our case, k = 2 was selected, aligning with our goal to separate apps into High Engagement and Low Engagement categories.
 
 
-🧪 Model Testing
+  ## 🧪 **Model Testing**  
 
 Although K-Means is an unsupervised algorithm (meaning it doesn't use labels during training), we introduce a manual validation step to test how well the clustering aligns with real-world categories:
 
