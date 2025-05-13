@@ -45,7 +45,7 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 ---
 
 ### 🎨 **PCA-Powered Visualization**  
-![Clusters]<img src="./ClusteringVisual.png" alt="Cluster Plot" width="600"/>  
+<img src="./plots/ClusteringVisual.png" alt="PCA Plot" width="600"/>  
 - **🔴 Red Cluster**: Low Engagement apps (left side).  
 - **🔵 Blue Cluster**: High Engagement apps (right side).  
 - **⭐ Centroids**: Nestled in dense regions, confirming their authority.  
