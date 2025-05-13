@@ -40,10 +40,9 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 
 ---
 
----
-
 ### 🎨 **PCA-Powered Visualization**  
-<img src="./plots/ClusteringVisual2.png" alt="PCA Plot" width="600"/>   
+<img src="./plots/ClusteringVisual2.png" alt="PCA Plot" width="600"/>
+
 - **🔵 Blue Cluster**: Label 0 based on hungarian algorithm.
 - **🟠 Orange Cluster:** Label 1 based on hungarian algorithm.
 - **🟢 Green Cluster:**  Label 2 based on hungarian algorithm.
