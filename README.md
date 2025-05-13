@@ -30,6 +30,46 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 ## Results
 # 📊 Part 1
 
+---
+
+## 🌟 **Key Learnings From K=3**  
+- **Initial Misstep**: **K=3** was chosen based on a misread of the elbow graph. 
+- **Class Confusion**: Particularly with class 1 (low recall and many misclassifications).
+- **Data Preprocessing Helped**: Modified dataset showed clearer clustering and performance gains.
+- **Lesson Learned**: The elbow method must be paired with interpretability checks.
+
+---
+
+---
+
+### 🎨 **PCA-Powered Visualization**  
+<img src="./plots/ClusteringVisual2.png" alt="PCA Plot" width="600"/>   
+- **🔵 Blue Cluster**: Label 0 based on hungarian algorithm.
+- **🟠 Orange Cluster:** Label 1 based on hungarian algorithm.
+- **🟢 Green Cluster:**  Label 2 based on hungarian algorithm.
+- **⭐ Centroids**: Nestled in dense regions, confirming their authority.  
+
+---
+
+## 📊 **Performance Showdown**  
+### 🏆 **Original Dataset (K=2)**  
+| Metric       | Score   | Verdict                          |  
+|--------------|---------|----------------------------------|  
+| Accuracy     | 60.50%  | Low accuracy, poor clustering.   |  
+| Precision    | 64.85%  | High false positives.            |  
+| Recall       | 60.50%  | Missed many class 1 points.      |  
+| F1-Score     | 57.28%  | Unbalanced performance.          |  
+
+### 🚀 **Modified Dataset (K=2)**  
+| Metric       | Score   | Verdict                          |  
+|--------------|---------|----------------------------------|  
+| Accuracy     | 69.00%  | Better, but still inconsistent.  |  
+| Precision    | 72.45%  | Fewer mislabels.                 |  
+| Recall       | 69.00%  | Improved detection.              |  
+| F1-Score     | 67.89%  | Balanced, but not optimal.       |  
+
+---
+
 # 📊 Part 2    
 
 ---
