@@ -29,17 +29,11 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 ## Model Testing
 ## Results
 # 📊 Part 1
-
----
-
 ## 🌟 **Key Learnings From K=3**  
 - **Initial Misstep**: **K=3** was chosen based on a misread of the elbow graph. 
 - **Class Confusion**: Particularly with class 1 (low recall and many misclassifications).
 - **Data Preprocessing Helped**: Modified dataset showed clearer clustering and performance gains.
 - **Lesson Learned**: The elbow method must be paired with interpretability checks.
-
----
-
 ### 🎨 **PCA-Powered Visualization**  
 <img src="./plots/ClusteringVisual2.png" alt="PCA Plot" width="600"/>
 
@@ -47,8 +41,6 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 - **🟠 Orange Cluster:** Label 1 based on hungarian algorithm.
 - **🟢 Green Cluster:**  Label 2 based on hungarian algorithm.
 - **⭐ Centroids**: Nestled in dense regions, confirming their authority.  
-
----
 
 ## 📊 **Performance Showdown**  
 ### 🏆 **Original Dataset (K=2)**  
@@ -71,7 +63,6 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 
 # 📊 Part 2    
 
----
 
 ## 🌟 **Key Insights at a Glance**  
 - **Optimal Clusters (K=2)**: Discovered natural groupings of apps into **High** and **Low Engagement** with **97% accuracy** (modified dataset).  
@@ -81,7 +72,6 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
   - **Recall**: **97%** (nearly all High Engagement apps correctly tagged).  
   - **F1-Score**: **97%** (perfect harmony of precision and recall).  
 
----
 
 ### 🎨 **PCA-Powered Visualization**  
 ![Final Visualization Plot of App Engagement Clusters](./plots/ClusteringVisual.png)  
@@ -90,7 +80,6 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 - **⭐ Centroids**: Nestled in dense regions, confirming their authority  
 - **Hybrid Apps?** A few rogue red dots near the blue cluster - possibly transitional engagement cases
 
----
 
 ## 📊 **Performance Showdown**  
 ### 🏆 **Original Dataset (K=2)**  
