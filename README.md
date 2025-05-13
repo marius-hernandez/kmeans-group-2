@@ -28,6 +28,68 @@ Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI
 ## Model Training
 ## Model Testing
 ## Results
+# 📊 Part 1
+
+# 📊 Part 2    
+
+---
+
+## 🌟 **Key Insights at a Glance**  
+- **Optimal Clusters (K=2)**: Discovered natural groupings of apps into **High** and **Low Engagement** with **97% accuracy** (modified dataset).  
+- **PCA Magic**: Visualized clusters in 2D space—Principal Component 1 revealed the dominant split between engagement levels.  
+- **Metrics That Shine**:  
+  - **Precision**: Up to **97.17%** (almost no false alarms!).  
+  - **Recall**: **97%** (nearly all High Engagement apps correctly tagged).  
+  - **F1-Score**: **97%** (perfect harmony of precision and recall).  
+
+---
+
+### 🎨 **PCA-Powered Visualization**  
+![Clusters]<img src="./ClusteringVisual.png" alt="Cluster Plot" width="600"/>  
+- **🔴 Red Cluster**: Low Engagement apps (left side).  
+- **🔵 Blue Cluster**: High Engagement apps (right side).  
+- **⭐ Centroids**: Nestled in dense regions, confirming their authority.  
+- **Hybrid Apps?** A few rogue red dots near the blue cluster—maybe *“sometimes-I’m-engaged”* apps!  
+
+---
+
+## 📊 **Performance Showdown**  
+### 🏆 **Original Dataset (K=2)**  
+| Metric       | Score   | Verdict                          |  
+|--------------|---------|----------------------------------|  
+| Accuracy     | 93.50%  | Rock-solid!                      |  
+| Precision    | 93.68%  | Few false positives.             |  
+| Recall       | 93.50%  | Rarely misses true High Engagers.|  
+| F1-Score     | 93.56%  | Balanced and reliable.           |  
+
+### 🚀 **Modified Dataset (K=2)**  
+| Metric       | Score   | Verdict                          |  
+|--------------|---------|----------------------------------|  
+| Accuracy     | 97.00%  | Near-perfect!                    |  
+| Precision    | 97.17%  | Almost no mislabels.             |  
+| Recall       | 97.00%  | Flawless capture of High Engagers.|  
+| F1-Score     | 97.00%  | Precision + Recall = ❤️          |  
+
+**Why the boost?** Cleaner data, fewer outliers, and sharper cluster boundaries!  
+
+---
+
+## 🛠️ **Behind the Scenes**  
+- **Tools Used**: Python, NumPy, Pandas, Matplotlib, PCA.  
+- **Algorithm**: Manual K-Means (no `sklearn` shortcuts!).  
+- **True Labels**: Crafted from app usage quantiles (High/Low Engagement).  
+
+---
+
+## 🚀 **Future Explorations**  
+- **Automate K-selection** with the `kneed` library.  
+- **Battle of Algorithms**: Test DBSCAN vs. K-Means on messy data.  
+- **Real-World Labels**: Partner with app developers for ground-truth validation.  
+
+---
+
+*✨ Data tells stories. We just listened.*  
+
 ## Authors
 
 - TRISHA MAY GONZALES
