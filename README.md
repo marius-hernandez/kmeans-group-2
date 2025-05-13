@@ -26,7 +26,8 @@ Original dataset: https://www.kaggle.com/datasets/anandshaw2001/mobile-apps-scre
 
 Modified dataset: https://drive.google.com/file/d/1Wu4mcdsiurCL4gDuOCP1Ij8Vq11qI3wR/view?usp=sharing
 
-🛠️ Model Training
+🛠️ Model Training 
+
 Before training, the dataset undergoes data preprocessing to prepare it for clustering:
 
 Data Cleaning and Transformation:
@@ -61,6 +62,7 @@ In our case, k = 2 was selected, aligning with our goal to separate apps into Hi
 
 
 🧪 Model Testing
+
 Although K-Means is an unsupervised algorithm (meaning it doesn't use labels during training), we introduce a manual validation step to test how well the clustering aligns with real-world categories:
 
 Manual Labeling for Ground Truth:
